@@ -4,10 +4,10 @@ import ThemeWrapper from "@/components/ThemeWrapper";
 import { personal } from "@/lib/config";
 
 export const metadata = {
-  title: `${personal.name} — Frontend Developer`,
+  title: `${personal.name} — Data Analyst`,
   description: personal.tagline,
   keywords:
-    "React Developer, Next.js, Frontend Developer, JavaScript, Portfolio",
+    "Data Analyst, Python, SQL, Power BI, Portfolio, Business Intelligence",
   authors: [{ name: personal.name }],
   icons: {
     icon: "/photo_circle.png",
@@ -15,7 +15,7 @@ export const metadata = {
     apple: "/photo_circle.png",
   },
   openGraph: {
-    title: `${personal.name} — Frontend Developer`,
+    title: `${personal.name} — Data Analyst`,
     description: personal.tagline,
     type: "website",
   },

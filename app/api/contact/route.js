@@ -23,7 +23,7 @@ export async function POST(request) {
       );
     }
 
-    const toAddress = process.env.EMAIL_TO || "gkarthikchary2001@gmail.com";
+    const toAddress = process.env.EMAIL_TO || "saisreereddy0909@gmail.com";
 
     // Email to YOU
     await resend.emails.send({
@@ -33,11 +33,11 @@ export async function POST(request) {
       subject: `[Portfolio] ${subject}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0d1117; color: #f1f5f9; padding: 32px; border-radius: 12px; border: 1px solid #1e293b;">
-          <h2 style="margin: 0 0 20px; color: #38bdf8;">New Message from Portfolio</h2>
+          <h2 style="margin: 0 0 20px; color: #06b6d4;">New Message from Portfolio</h2>
           <p style="color: #94a3b8; font-size: 13px;">From: <span style="color: #f1f5f9;">${name}</span></p>
-          <p style="color: #94a3b8; font-size: 13px;">Email: <span style="color: #38bdf8;">${email}</span></p>
+          <p style="color: #94a3b8; font-size: 13px;">Email: <span style="color: #06b6d4;">${email}</span></p>
           <p style="color: #94a3b8; font-size: 13px;">Subject: <span style="color: #f1f5f9;">${subject}</span></p>
-          <div style="margin-top: 20px; padding: 20px; background: #131d2e; border-radius: 8px; border-left: 3px solid #38bdf8;">
+          <div style="margin-top: 20px; padding: 20px; background: #131d2e; border-radius: 8px; border-left: 3px solid #06b6d4;">
             <p style="margin: 0; color: #f1f5f9; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
           </div>
         </div>
@@ -46,17 +46,17 @@ export async function POST(request) {
 
     // Auto-reply to sender
     await resend.emails.send({
-      from: "Karthik Ganamukkula <onboarding@resend.dev>",
+      from: "Saisree Reddy Kolagotla <onboarding@resend.dev>",
       to: email,
       subject: `Thanks for reaching out, ${name}!`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0d1117; color: #f1f5f9; padding: 32px; border-radius: 12px; border: 1px solid #1e293b;">
-          <h2 style="color: #38bdf8; margin-top: 0;">Hey ${name}! 👋</h2>
+          <h2 style="color: #06b6d4; margin-top: 0;">Hey ${name}! 👋</h2>
           <p style="color: #94a3b8; line-height: 1.6;">Thanks for getting in touch. I'll get back to you as soon as possible.</p>
-          <div style="padding: 16px; background: #131d2e; border-radius: 8px; margin: 20px 0; border-left: 3px solid #38bdf8;">
+          <div style="padding: 16px; background: #131d2e; border-radius: 8px; margin: 20px 0; border-left: 3px solid #06b6d4;">
             <p style="margin: 0; color: #f1f5f9; font-size: 13px; line-height: 1.5; white-space: pre-wrap;">${message}</p>
           </div>
-          <p style="color: #94a3b8;">Talk soon,<br/><strong style="color: #f1f5f9;">Karthik Ganamukkula</strong><br/><span style="color: #38bdf8; font-size: 13px;">Frontend Developer</span></p>
+          <p style="color: #94a3b8;">Talk soon,<br/><strong style="color: #f1f5f9;">Saisree Reddy Kolagotla</strong><br/><span style="color: #06b6d4; font-size: 13px;">Data Analyst</span></p>
         </div>
       `,
     });

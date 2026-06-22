@@ -17,13 +17,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.72, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
-const techStack = [
-  "React.js",
-  "Next.js",
-  "JavaScript",
-  "Redux Toolkit",
-  "Tailwind CSS",
-];
+const techStack = ["Python", "SQL", "Power BI", "Excel", "Data Analytics"];
 
 export default function Hero() {
   const scrollTo = (id) =>
@@ -32,15 +26,15 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative flex items-center min-h-screen overflow-hidden"
       style={{ background: "var(--bg)" }}
     >
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(rgba(56,189,248,0.025) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(56,189,248,0.025) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(16,185,129,0.025) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(6,182,212,0.025) 1px, transparent 1px)`,
           backgroundSize: "72px 72px",
         }}
       />
@@ -50,7 +44,7 @@ export default function Hero() {
         className="absolute top-1/4 -left-40 w-[480px] h-[480px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(56,189,248,0.07) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%)",
         }}
       />
 
@@ -59,13 +53,13 @@ export default function Hero() {
         className="absolute -bottom-10 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 65%)",
         }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-14 py-28 w-full">
         <div
-          className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+          className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
           style={{ minHeight: "78vh" }}
         >
           {/* ── LEFT ── */}
@@ -104,7 +98,7 @@ export default function Hero() {
                   letterSpacing: "-0.01em",
                 }}
               >
-                {personal.name.split(" ")[0]}
+                {personal.name.split(" ").slice(0, 2).join(" ")}
               </span>
               <span
                 className="block"
@@ -114,13 +108,13 @@ export default function Hero() {
                   fontSize: "clamp(2.8rem, 5.8vw, 5rem)",
                   letterSpacing: "-0.01em",
                   background:
-                    "linear-gradient(135deg, #38bdf8 0%, #818cf8 55%, #f472b6 100%)",
+                    "linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #3b82f6 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
                 }}
               >
-                {personal.name.split(" ").slice(1).join(" ")}
+                {personal.name.split(" ").slice(2).join(" ")}
               </span>
             </motion.h1>
 
@@ -134,7 +128,7 @@ export default function Hero() {
                 style={{ background: "var(--brand)" }}
               />
               <span
-                className="text-sm sm:text-base font-medium"
+                className="text-sm font-medium sm:text-base"
                 style={{
                   color: "var(--fg-muted)",
                   fontFamily: "'DM Mono', monospace",
@@ -193,10 +187,10 @@ export default function Hero() {
                   e.preventDefault();
                   scrollTo("#projects");
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl"
                 style={{
-                  background: "linear-gradient(135deg, #38bdf8, #6366f1)",
-                  boxShadow: "0 8px 28px rgba(56,189,248,0.22)",
+                  background: "linear-gradient(135deg, #10b981, #06b6d4)",
+                  boxShadow: "0 8px 28px rgba(16,185,129,0.22)",
                   fontFamily: "'Inter', sans-serif",
                   textDecoration: "none",
                 }}
@@ -209,7 +203,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.97 }}
                 href={personal.resume}
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold border"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold border rounded-xl"
                 style={{
                   borderColor: "var(--border)",
                   color: "var(--fg)",
@@ -229,7 +223,7 @@ export default function Hero() {
                   e.preventDefault();
                   scrollTo("#contact");
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold border"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold border rounded-xl"
                 style={{
                   borderColor: "var(--border)",
                   color: "var(--fg)",
@@ -245,7 +239,7 @@ export default function Hero() {
             {/* Socials */}
             <motion.div {...fadeUp(0.48)} className="flex items-center gap-4">
               <div
-                className="h-px w-10"
+                className="w-10 h-px"
                 style={{ background: "var(--border)" }}
               />
               {social.github && (
@@ -272,7 +266,7 @@ export default function Hero() {
                 <Mail size={17} />
               </a>
               <div
-                className="h-px w-10"
+                className="w-10 h-px"
                 style={{ background: "var(--border)" }}
               />
             </motion.div>
@@ -363,17 +357,17 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-2 -right-6 z-10 flex items-center gap-2 px-3 py-2 rounded-xl text-xs border shadow-xl"
+                className="absolute z-10 flex items-center gap-2 px-3 py-2 text-xs border shadow-xl -top-2 -right-6 rounded-xl"
                 style={{
                   background: "rgba(10,14,22,0.90)",
-                  borderColor: "rgba(56,189,248,0.3)",
-                  color: "#38bdf8",
+                  borderColor: "rgba(16,185,129,0.3)",
+                  color: "#10b981",
                   fontFamily: "'DM Mono', monospace",
                   backdropFilter: "blur(12px)",
                   boxShadow: "0 8px 28px rgba(0,0,0,0.45)",
                 }}
               >
-                <span style={{ color: "#34d399" }}>◆</span> Next.js Dev
+                <span style={{ color: "#10b981" }}>📈</span> Open to Work
               </motion.div>
 
               {/* Floating badge — bottom left */}
@@ -385,17 +379,17 @@ export default function Hero() {
                   ease: "easeInOut",
                   delay: 0.8,
                 }}
-                className="absolute -bottom-2 -left-6 z-10 flex items-center gap-2 px-3 py-2 rounded-xl text-xs border shadow-xl"
+                className="absolute z-10 flex items-center gap-2 px-3 py-2 text-xs border shadow-xl -bottom-2 -left-6 rounded-xl"
                 style={{
                   background: "rgba(10,14,22,0.90)",
-                  borderColor: "rgba(139,92,246,0.35)",
-                  color: "#a78bfa",
+                  borderColor: "rgba(6,182,212,0.35)",
+                  color: "#06b6d4",
                   fontFamily: "'DM Mono', monospace",
                   backdropFilter: "blur(12px)",
                   boxShadow: "0 8px 28px rgba(0,0,0,0.45)",
                 }}
               >
-                ✦ React.js
+                📊 Data Analyst
               </motion.div>
             </div>
           </motion.div>

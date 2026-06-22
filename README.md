@@ -1,6 +1,6 @@
-# Karthik Ganamukkula — Developer Portfolio
+# Saisree Reddy Kolagotla — Data Analyst Portfolio
 
-A modern, minimal developer portfolio built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and **Redux Toolkit**.
+A modern, premium data analyst portfolio built with sleek analytics styling, responsive UI, and business-focused storytelling.
 
 ---
 
@@ -12,7 +12,7 @@ npm install
 
 # 2. Set up environment variables
 cp .env.example .env.local
-# Edit .env.local with your Gmail credentials (see Contact Form section)
+# Edit `.env.local` with your Resend API key and recipient email
 
 # 3. Run development server
 npm run dev
@@ -78,7 +78,7 @@ In `lib/config.js`, add to the `projects` array:
 
 ```js
 {
-  role: "Senior Frontend Developer",
+  role: "Data Analyst",
   company: "Company Name",
   location: "City",
   duration: "Jan 2026 – Present",
@@ -87,7 +87,7 @@ In `lib/config.js`, add to the `projects` array:
     "Achievement 1...",
     "Achievement 2...",
   ],
-  tech: ["React", "TypeScript"],
+  tech: ["Python", "SQL"],
 },
 ```
 
@@ -100,23 +100,13 @@ The contact form sends emails via Resend (free, no SSL issues).
 1. Go to [resend.com](https://resend.com) → Sign up free
 2. Dashboard → API Keys → Create API Key → Copy it
 3. Edit `.env.local`:
-<<<<<<< HEAD
-```env
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
-EMAIL_TO=gkarthikchary2001@gmail.com
-```
-
-That's it — no Gmail App Password needed.
-   ```
-=======
->>>>>>> 0626f69 (updated README FILE)
 
 ```env
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
-EMAIL_TO=gkarthikchary2001@gmail.com
+EMAIL_TO=saisreereddy0909@gmail.com
 ```
 
-## That's it — no Gmail App Password needed.
+## That's it — no SMTP or Gmail setup required.
 
 ## 📁 Folder Structure
 
@@ -125,7 +115,7 @@ portfolio/
 ├── app/
 │   ├── api/
 │   │   └── contact/
-│   │       └── route.js        ← Email API (Nodemailer)
+│   │       └── route.js        ← Email API (Resend)
 │   ├── globals.css             ← Design system & CSS variables
 │   ├── layout.js               ← Root layout + metadata
 │   └── page.js                 ← Main page
@@ -148,7 +138,7 @@ portfolio/
 │   └── ReduxProvider.js
 ├── public/
 │   ├── photo.jpg               ← Your profile photo
-│   └── KarthikCharyGanamukkula.pdf  ← Your resume
+│   └── Saisree_Reddy_Kolagotla_Resume.pdf  ← Your resume
 ├── .env.example                ← Copy to .env.local
 └── package.json
 ```
@@ -161,17 +151,17 @@ Theme colors are CSS variables in `app/globals.css`:
 
 ```css
 :root {               /* Light mode */
-  --brand: #0ea5e9;   /* Primary brand color */
-  --accent: #06b6d4;  /* Accent color */
+  --brand: #10b981;   /* Primary analytics green */
+  --accent: #06b6d4;  /* Secondary blue accent */
   ...
 }
 .dark {               /* Dark mode */
-  --brand: #38bdf8;
+  --brand: #10b981;
   ...
 }
 ```
 
-Change `--brand` and `--accent` to match your preferred color scheme.
+Change `--brand` and `--accent` to match your preferred analytics palette.
 
 ---
 
@@ -185,7 +175,7 @@ npm i -g vercel
 vercel
 
 # Add environment variables in Vercel Dashboard:
-# Settings → Environment Variables → Add EMAIL_USER, EMAIL_PASS, EMAIL_TO
+# Settings → Environment Variables → Add RESEND_API_KEY, EMAIL_TO
 ```
 
 Or connect your GitHub repo directly at [vercel.com](https://vercel.com).
@@ -200,9 +190,9 @@ Or connect your GitHub repo directly at [vercel.com](https://vercel.com).
 | Tailwind CSS  | Styling                |
 | Framer Motion | Animations             |
 | Redux Toolkit | Theme & UI state       |
-| Nodemailer    | Contact form emails    |
+| Resend        | Contact form emails    |
 | Lucide React  | Icons                  |
 
 ---
 
-Built with ❤️ by **Karthik Ganamukkula**
+Built with ❤️ by **Saisree Reddy Kolagotla**

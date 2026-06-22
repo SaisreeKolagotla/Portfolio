@@ -193,7 +193,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a
-            href={`https://github.com/karthikchary06?tab=repositories`}
+            href={`https://github.com/SaisreeKolagotla?tab=repositories`}
             target="_blank"
             rel="noreferrer"
             className="btn-outline inline-flex"
