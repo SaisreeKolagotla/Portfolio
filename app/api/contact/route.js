@@ -1,6 +1,9 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Resend constructor throws if the API key is empty/undefined.
+// We use a placeholder key here to allow Next.js build to succeed if the env variable is not set yet.
+const apiKey = process.env.RESEND_API_KEY || "re_placeholder_key";
+const resend = new Resend(apiKey);
 console.log("API KEY:", process.env.RESEND_API_KEY ? "found" : "MISSING");
 
 export async function POST(request) {
